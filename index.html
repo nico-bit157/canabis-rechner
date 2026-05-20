@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cannabis Preisrechner</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cannabis Preisrechner</h1>
+
+        <label for="gramm">Menge in Gramm</label>
+        <input type="number" id="gramm" placeholder="z. B. 5" min="0" step="0.1" />
+
+        <label for="grundpreis">Grundpreis pro Gramm (€)</label>
+        <input type="number" id="grundpreis" value=9.52 min="0" step="0.01" />
+
+        <label for="preis15">Preis für 0–15g (€ pro Gramm)</label>
+        <input type="number" id="preis15" value=8.56 min="0" step="0.01" />
+
+        <label for="preis30">Preis für 15–30g (€ pro Gramm)</label>
+        <input type="number" id="preis30" value=3.70 min="0" step="0.01" />
+
+        <label for="preis30plus">Preis über 30g (€ pro Gramm)</label>
+        <input type="number" id="preis30plus" value=2.60 min="0" step="0.01" />
+
+        <button onclick="berechnen()">Preis berechnen</button>
+
+        <div class="result" id="ergebnis">
+            Gesamtpreis: 0,00 €
+        </div>
+        <table class="result-table" style="visibility: hidden;">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Rechnung</th>
+                <th>Ergebnis</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+             
+            </tbody>
+          </table>
+        </div>
+      
+    <script src="script.js"></script>
+</body>
+
+</html>
